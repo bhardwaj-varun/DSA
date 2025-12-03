@@ -2,7 +2,7 @@ package greedy;
 
 import java.util.Arrays;
 
-// https://leetcode.com/problems/assign-cookies/submissions/1845939963/
+// https://leetcode.com/problems/assign-cookies/
 
 public class AssignCookies {
     public static void main() {
