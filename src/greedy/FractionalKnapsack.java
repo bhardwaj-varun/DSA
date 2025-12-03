@@ -5,7 +5,6 @@ import java.util.Comparator;
 
 // https://www.naukri.com/code360/problems/fractional-knapsack_975286
 // https://www.geeksforgeeks.org/dsa/fractional-knapsack-problem/
-//
 class Item{
     int value;
     int weight;
@@ -25,8 +24,6 @@ class ItemComparator implements Comparator<Item> {
 }
 
 class Solution{
-    Item[] items;
-
     public double solve(int W, Item[] items, int n){
         double totalValue = 0;
         double currentWeight = 0;
@@ -41,15 +38,11 @@ class Solution{
                 break;
             }
         }
-
         return totalValue;
     }
 }
 public class FractionalKnapsack {
     public static void main(String[] args) {
-        int n =6;
-//        50 40 90 120 10 200
-//        40 50 25 100 30 45
         Item[] arr = { new Item(40, 50),
                        new Item(50, 40),
                        new Item(25, 90),
@@ -59,8 +52,7 @@ public class FractionalKnapsack {
 
         int W = 200;
         Solution solution = new Solution();
-
-        double ans = solution.solve(W, arr, 6);
+        double ans = solution.solve(W, arr, arr.length);
         System.out.println("total value: " + ans);
 
     }
